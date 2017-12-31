@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="js/PersonRepository.js"></script>
+    </head>
+    <body>
+        <div class="">
+            <script>
+                var allPersons = GetAll();
+                var text = "";
+                for(i = 0; i < allPersons.length; i++){
+                    text += "<div class='personName'>" + allPersons[i].Name + "</div>";
+                    text += "<div id=" + allPersons[i].Id + " class='divClick'>More details</div>";
+                    text += "<div class='personDetails'></div>";
+                }
+                document.write(text);
+            </script>
+        </div>
+    </body>
+</html>

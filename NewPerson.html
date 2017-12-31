@@ -1,0 +1,24 @@
+<html>
+    <head>
+            <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+        <h1>Enter New Person Data using fields below.</h1>
+        <form>
+                <input type="text" name="fname" placeholder="First name"><br>
+                <input type="text" name="lname" placeholder="Last name"><br>
+                <input type="text" name="age" placeholder="Age"><br>
+                <input type="submit" onclick="AddPerson()" >            
+        </form>
+        <script>
+            function AddPerson(){
+                var newPerson; 
+                newPerson["fname"]= $( "input[name='fname']" );
+                newPerson["lname"]= $( "input[name='lname']" );
+                newPerson["age"]= $( "input[name='age']" );
+                newPerson["id"]=GetNextID();
+                Add(newPerson);
+            }
+        </script>
+    </body>
+</html>
